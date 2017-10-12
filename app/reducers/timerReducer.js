@@ -26,8 +26,8 @@ const timer = (state = initialState, action) => {
     case INITIAL:
       return {
         ...state,
-        activeTime: state.defaultActiveTime * 60,
-        breakTime: state.defaultBreakTime * 60,
+        activeTime: state.defaultActiveTime,
+        breakTime: state.defaultBreakTime,
         fourSessionBreakTime: state.defaultBreakTime * 2
       };
     case CLEAR:
@@ -82,14 +82,14 @@ const timer = (state = initialState, action) => {
         defaultBreakTime: state.defaultBreakTime + 1
       };
     case MINUS_SESSION:
-      if (state.defaultActiveTime > 1) {
+      if (state.defaultActiveTime > 0) {
         return {
           ...state,
           defaultActiveTime: state.defaultActiveTime - 1
         };
       }
     case MINUS_BREAK:
-      if (state.defaultBreakTime > 1) {
+      if (state.defaultBreakTime > 0) {
         return {
           ...state,
           defaultBreakTime: state.defaultBreakTime - 1
