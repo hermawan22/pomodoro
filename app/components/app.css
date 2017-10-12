@@ -1,0 +1,38 @@
+.wrapper {
+  text-align: center;
+  margin-top: 20%;
+}
+.breakOrWork {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.text {
+  margin-bottom: 10px;
+}
+.menuEachTime {
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 18px;
+}
+.textMenuTime {
+  margin: 10px;
+  padding-top: 10px;
+}
+.timeWrapper {
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+.buttonWrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.buttonMenu {
+  display: inline;
+  background: rgb(236, 236, 236);
+  margin-right: 10px;
+  border: 1px solid rgb(89, 145, 0);
+  padding: 10px;
+  border-radius: 5px;
+}

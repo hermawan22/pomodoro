@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": "last 2 versions"
+        },
+        "loose": true,
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "syntax-dynamic-import",
+    "dynamic-import-webpack",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
+}
