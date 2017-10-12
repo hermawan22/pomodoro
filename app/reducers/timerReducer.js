@@ -45,7 +45,7 @@ const timer = (state = initialState, action) => {
         activeTime: state.activeTime - 1
       };
     case BREAK_TIME:
-      if (state.session % 2 === 0) {
+      if (state.session % 4 === 0) {
         return {
           ...state,
           fourSessionBreakTime: state.fourSessionBreakTime - 1,
