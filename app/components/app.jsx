@@ -54,8 +54,7 @@ class App extends Component {
       this.breakTime();
     }
     if (
-      (timer.breakTime < 0 && timer.isBreak === true) ||
-      (timer.fourSessionBreakTime < 0 && timer.isBreak === true)
+      (timer.breakTime < 0 && timer.isBreak === true)
     ) {
       this.stopTimer();
       this.props.dispatch(finishBreakTime());
@@ -65,7 +64,7 @@ class App extends Component {
   renderTimer() {
     const { timer } = this.props;
     if (timer.isBreak) {
-      if (timer.session % 2 == 0) {
+      if (timer.session % 4 == 0) {
         return formatTime(timer.fourSessionBreakTime);
       }
       return formatTime(timer.breakTime);
@@ -73,7 +72,6 @@ class App extends Component {
     return formatTime(timer.activeTime);
   }
   render() {
-    console.log(time);
     const { timer } = this.props;
     return (
       <div className="wrapper">
