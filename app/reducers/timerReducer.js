@@ -26,8 +26,8 @@ const timer = (state = initialState, action) => {
     case INITIAL:
       return {
         ...state,
-        activeTime: state.defaultActiveTime,
-        breakTime: state.defaultBreakTime,
+        activeTime: state.defaultActiveTime * 60,
+        breakTime: state.defaultBreakTime * 60,
         fourSessionBreakTime: state.defaultBreakTime * 2
       };
     case CLEAR:
