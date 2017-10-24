@@ -54,7 +54,8 @@ class App extends Component {
       this.breakTime();
     }
     if (
-      (timer.breakTime < 0 && timer.isBreak === true)
+      (timer.breakTime < 0 && timer.isBreak === true) ||
+      (timer.fourSessionBreakTime < 0 && timer.isBreak === true)
     ) {
       this.stopTimer();
       this.props.dispatch(finishBreakTime());

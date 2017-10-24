@@ -28,7 +28,7 @@ const timer = (state = initialState, action) => {
         ...state,
         activeTime: state.defaultActiveTime * 60,
         breakTime: state.defaultBreakTime * 60,
-        fourSessionBreakTime: state.defaultBreakTime * 2
+        fourSessionBreakTime: (state.defaultBreakTime * 60) * 2
       };
     case CLEAR:
       return {
@@ -63,7 +63,7 @@ const timer = (state = initialState, action) => {
         isBreak: true,
         activeTime: state.defaultActiveTime * 60,
         breakTime: state.defaultBreakTime * 60,
-        fourSessionBreakTime: state.defaultBreakTime * 2
+        fourSessionBreakTime: (state.defaultBreakTime * 60) * 2
       };
     case FINISH_BREAK_TIME:
       return {
@@ -71,7 +71,7 @@ const timer = (state = initialState, action) => {
         activeTime: state.defaultActiveTime * 60,
         isBreak: false,
         breakTime: state.defaultBreakTime * 60,
-        fourSessionBreakTime: state.defaultBreakTime * 2
+        fourSessionBreakTime: (state.defaultBreakTime * 60) * 2
       };
     case PLUS_SESSION:
       return {
