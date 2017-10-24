@@ -6,7 +6,7 @@ const store = createStore(
   rootReducer,
   compose(
     typeof window === "object" && window.devToolsExtension !== "undefined"
-      ? window.devToolsExtension()
+      ? window.devToolsExtension
       : f => f // reduxDevTools
   )
 );
